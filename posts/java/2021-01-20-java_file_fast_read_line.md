@@ -22,8 +22,8 @@ implementation 'com.seomse.commons:seomse-commons:1.2.4'
 
 java 소스에서 아래와 같이 사용할 수 있습니다
 ```java
-    int count = FileUtil.getLineCount(filePath);
-    String lineValue = FileUtil.getLine(filePath, 77)
+int count = FileUtil.getLineCount(filePath);
+String lineValue = FileUtil.getLine(filePath, 77)
 ```
 
 # 성능비교
@@ -31,25 +31,24 @@ java 소스에서 아래와 같이 사용할 수 있습니다
 
 ```java
 
-    //java.io 패키지 사용 
-	try(BufferedReader br = new BufferedReader(new InputStreamReader(new FileInputStream(file), charSet))){
-		 String line;
-	     while ((line = br.readLine()) != null) {
-	    	  
-	     }
-	}catch(IOException e){
-		throw new IORuntimeException(e);
-	}
-	
-	
-	//java.nio 패키지 사용
- 
-    try (Stream<String> lines = Files.lines(Paths.get(path), StandardCharsets.UTF_8)) {
-        //noinspection OptionalGetWithoutIsPresent
-        return lines.skip(lineIndex).findFirst().get();
-    }catch(IOException e){
-        throw new IORuntimeException(e);
-    }
+//java.io 패키지 사용 
+try(BufferedReader br = new BufferedReader(new InputStreamReader(new FileInputStream(file), charSet))){
+	 String line;
+     while ((line = br.readLine()) != null) {
+    	  
+     }
+}catch(IOException e){
+	throw new IORuntimeException(e);
+}
+
+
+//java.nio 패키지 사용
+try (Stream<String> lines = Files.lines(Paths.get(path), StandardCharsets.UTF_8)) {
+    //noinspection OptionalGetWithoutIsPresent
+    return lines.skip(lineIndex).findFirst().get();
+}catch(IOException e){
+    throw new IORuntimeException(e);
+}
 
 ```
 위와 같은 방식으로 구현하여 각각 성능측정을 해보니 nio 가 약간더 좋은 성능을 보였습니다.
@@ -59,57 +58,57 @@ java 소스에서 아래와 같이 사용할 수 있습니다
 
 ```java
 
-		try (
-				FileInputStream stream = new FileInputStream(path)
-		){
+try (
+		FileInputStream stream = new FileInputStream(path)
+){
 
-			int lastLineIndex = 0;
+	int lastLineIndex = 0;
 
-			boolean isMake = lineIndex == lastLineIndex;
+	boolean isMake = lineIndex == lastLineIndex;
 
-			List<byte[]> byteList = new ArrayList<>();
-			int size = 0;
+	List<byte[]> byteList = new ArrayList<>();
+	int size = 0;
 
-			byte[] buffer = new byte[10240];
-			int n;
+	byte[] buffer = new byte[10240];
+	int n;
 
-			while ((n = stream.read(buffer)) > 0) {
+	while ((n = stream.read(buffer)) > 0) {
 
-				int start = 0;
+		int start = 0;
 
-				for (int i = 0; i < n; i++) {
+		for (int i = 0; i < n; i++) {
 
-					if (buffer[i] == '\n') {
-						lastLineIndex++;
-						if(isMake){
-
-							byte [] add = Arrays.copyOfRange(buffer, start, i);
-							size += add.length;
-							byteList.add(add);
-
-							return toStringBytesList(byteList, size, cs);
-						}
-						isMake = lineIndex == lastLineIndex;
-						start = i+1;
-					}
-				}
-
+			if (buffer[i] == '\n') {
+				lastLineIndex++;
 				if(isMake){
-					byte [] add = Arrays.copyOfRange(buffer, start, n);
+
+					byte [] add = Arrays.copyOfRange(buffer, start, i);
 					size += add.length;
 					byteList.add(add);
 
+					return toStringBytesList(byteList, size, cs);
 				}
+				isMake = lineIndex == lastLineIndex;
+				start = i+1;
 			}
-
-
-			if(size == 0){
-				return "";
-			}
-			return toStringBytesList(byteList, size, cs);
-		}catch(IOException e){
-			throw new IORuntimeException(e);
 		}
+
+		if(isMake){
+			byte [] add = Arrays.copyOfRange(buffer, start, n);
+			size += add.length;
+			byteList.add(add);
+
+		}
+	}
+
+
+	if(size == 0){
+		return "";
+	}
+	return toStringBytesList(byteList, size, cs);
+}catch(IOException e){
+	throw new IORuntimeException(e);
+}
 
 ```
 ## 성능비교 소스
