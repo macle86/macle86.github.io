@@ -49,7 +49,7 @@ tags: [java,jdbc]
 - \<entry key="application.jdbc.naming.seq"\>string,double,long,integer,datetime\</entry\>
 - \<entry key="application.jdbc.naming.default"\>string\</entry\>
 ## 객체 생성을 편하게 하는 도구
-``` java
+```java
 package com.seomse.jdbc.example.naming;
 
 import com.seomse.jdbc.connection.ApplicationConnectionPool;
@@ -70,7 +70,7 @@ public class NamingObjectMake {
 ```
 위와같은 형태의 코드를 사용하면
 
-``` java
+```java
 
 @PrimaryKey(seq = 1)
 private String ITEM_CD;
