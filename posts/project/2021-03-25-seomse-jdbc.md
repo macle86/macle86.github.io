@@ -258,7 +258,7 @@ public class RowDataIn {
 ```
 
 # gradle, etc
+- 최신버전은 https://github.com/seomse/seomse-jdbc 에서 확인바랍니다 아래는 글 작성 당시의 버전 입니다.
 - implementation 'com.seomse.jdbc:seomse-jdbc:0.9.8'
-
 - etc
   - https://mvnrepository.com/artifact/com.seomse.jdbc/seomse-jdbc/0.9.8
