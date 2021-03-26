@@ -28,10 +28,10 @@ tags: [java,jdbc]
 - DB를 설계하기전에 아래처럼 도메인 헤드별 타입을 정의하고, 용어사전을 만들어서 사용하는 경우가 많았는데 당시에는 이러한 규칙이 잘 지켜지지 않으면 데이터 품질평가 점수가 좋지 않았습니다.
 ![도메인 헤드](https://raw.githubusercontent.com/macle86/macle86.github.io/master/img/rdb/domain_heag.JPG)
 
-![용어사전](https://github.com/macle86/macle86.github.io/blob/master/img/rdb/rdb_dic.JPG)
+![용어사전](https://raw.githubusercontent.com/macle86/macle86.github.io/master/img/rdb/rdb_dic.JPG)
 
 - 위 규칙을 적용한 테이블 형태
-![테이블](https://github.com/macle86/macle86.github.io/blob/master/img/rdb/table_sample.JPG)
+![테이블](https://raw.githubusercontent.com/macle86/macle86.github.io/master/img/rdb/table_sample.JPG)
 
 - 위 그림을 보면 항상 컬럼뒤에 도메인 헤드가 붙는 설계형태이고 아무런 도메인 헤드가 붙지않으면 varchar, char 형태의 컬럼입니다.
 - 이러한 설계 구조에서 쉽게 사용하고자하여 개발하게 되었습니다.
