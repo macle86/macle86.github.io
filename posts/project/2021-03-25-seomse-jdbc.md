@@ -63,12 +63,12 @@ import com.seomse.jdbc.naming.JdbcNaming;
  */
 public class NamingObjectMake {
 
-	public static void main(String [] args){
-		String tableName = "T_STOCK_ITEM";
-		System.out.println("@Table(name=\"" +  tableName+ "\")\n");
-		System.out.println(JdbcNaming.makeObjectValue(tableName));
+  public static void main(String [] args){
+    String tableName = "T_STOCK_ITEM";
+    System.out.println("@Table(name=\"" +  tableName+ "\")\n");
+    System.out.println(JdbcNaming.makeObjectValue(tableName));
 
-	}
+  }
 }
 ```
 위와같은 형태의 코드를 사용하면
@@ -187,7 +187,8 @@ public class StockItem {
   - 두 db시스템의 connection 을 이용한방식
   - 파일로 내린후 파일을 올리는방식 (json)
 
-- connection 을 이용한 데이터 복사방식
+connection 을 이용한 데이터 복사방식
+
 ```java
 
 package com.seomse.jdbc.example.admin;
@@ -224,7 +225,8 @@ public class RowDataCopy {
 
 ```
 
-- data file out
+data file out
+
 ```java
 
 package com.seomse.jdbc.example.admin;
@@ -243,7 +245,8 @@ public class RowDataOut {
 }
 ```
 
-- data file in
+data file in
+
 ```java
 
 package com.seomse.jdbc.example.admin;
