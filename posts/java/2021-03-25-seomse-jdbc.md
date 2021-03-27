@@ -158,7 +158,7 @@ public class ObjectMake {
 위와 같이 어노테이션을 생성하여
 ```java
 @Table(name="B_STOCK_ITEM")
-public class StockItem {
+public class Item {
   @PrimaryKey(seq = 1)
   @Column(name = "ITEM_CD")
   private String code;
@@ -170,17 +170,34 @@ public class StockItem {
   private MarketType marketType = MarketType.KOSPI;
 }
 ```
+
+
 위 형태의 객체를 만들어 사용하는 형태입니다.
 
-그박에도 com.seomse.jdbc.JdbcQuery 클래스에서
-- https://github.com/seomse/seomse-jdbc/blob/master/src/main/java/com/seomse/jdbc/JdbcQuery.java
-- public static List<Map<String, String>> getMapStringList(String sql);
-- public static String getResultOne(String sql)
-  과 같은 다양한 메소드를 지원하니 오픈소스 이므로 많은필요한 부분의 내용을 확인 할 수 있습니다.
+- 위와 같은 형태로 생성된 객체를 아래처럼 select를 하거나
 
-또한 DB시간과 시퀀스를 가져오는 부분은 com.seomse.jdbc.Database 에서 제공합니다.
-- public static String nextVal(String sequenceName)
-- public static long getDateTime()
+```java
+    //seomse-stock analysis module 의 일부
+    List<Item> stockItemList = JdbcObjects.getObjList(Item.class, "(DELISTING_DT < ? OR DELISTING_DT IS NULL) AND LISTING_YMD <= '" + ymd +"'", PrepareStatements.newTimeMap(time));
+
+```
+
+아래와 같이 다른 DB에서 데이터를 가져와서 이관하는 형태로 사용하기도 합니다.
+```java
+  JdbcNaming.insert(insertConn, JdbcNaming.getObjList(selectConn, Market5mNo.class, "YMDHM >= '" + ymdhm + "'"),true);
+         
+
+```
+
+-그박에도 com.seomse.jdbc.JdbcQuery 클래스에서
+  - https://github.com/seomse/seomse-jdbc/blob/master/src/main/java/com/seomse/jdbc/JdbcQuery.java
+  - public static List<Map<String, String>> getMapStringList(String sql);
+  - public static String getResultOne(String sql)
+  - 다양한 메소드를 지원하니 오픈소스 이므로 많은필요한 부분의 내용을 확인 할 수 있습니다.
+
+- 또한 DB시간과 시퀀스를 가져오는 부분은 com.seomse.jdbc.Database 에서 제공합니다.
+  - public static String nextVal(String sequenceName)
+  - public static long getDateTime()
 
 ## 데이터 이관도구
 - 데이터 이관 방법은 2가지 형태로 지원합니다
