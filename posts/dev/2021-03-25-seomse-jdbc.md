@@ -2,7 +2,7 @@
 title: seomse-jdbc 개발 배경과 활용법
 author: macle
 date: 2021-03-25 21:30:00 +0800
-categories: [java]
+categories: [개발]
 tags: [java,jdbc]
 ---
 
