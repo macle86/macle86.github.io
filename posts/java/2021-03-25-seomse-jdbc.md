@@ -157,7 +157,7 @@ public class ObjectMake {
 ```
 위와 같이 어노테이션을 생성하여
 ```java
-@Table(name="B_STOCK_ITEM")
+@Table(name="T_STOCK_ITEM")
 public class Item {
   @PrimaryKey(seq = 1)
   @Column(name = "ITEM_CD")
