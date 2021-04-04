@@ -1,5 +1,5 @@
 ---
-title: 보안키패드와 메모리해킹
+title: 보안키패드와 메모리해킹(키보드 보안)
 author: macle
 date: 2021-03-27 21:30:00 +0800
 categories: [개발]

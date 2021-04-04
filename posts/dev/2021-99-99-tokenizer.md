@@ -1,5 +1,5 @@
 ---
-title: Tokenizer 와 형태소 분석기
+title: Tokenizer 와 형태소 분석, 사전관리
 author: macle
 date: 2021-03-27 21:30:00 +0800
 categories: [개발]
