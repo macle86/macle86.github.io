@@ -1,9 +1,9 @@
 ---
 title: geth centos 에 설치
 author: macle
-date: 2021-01-20 10:30:00 +0800
+date: 2021-09-16 13:10:00 +0800
 categories: [개발]
-tags: [java,file,data]
+tags: [ethereum,geth]
 ---
 
 # 목적
