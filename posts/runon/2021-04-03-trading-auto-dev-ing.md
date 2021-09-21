@@ -2,7 +2,7 @@
 title: 자동매매를 개발하면서 경험한 것(주식, ETF, 선물, 비트코인)
 author: macle
 date: 2021-04-03 21:30:00 +0800
-categories: [자동매매]
+categories: [RUNON]
 tags: [주식,ETF,비트코인,선물]
 ---
 

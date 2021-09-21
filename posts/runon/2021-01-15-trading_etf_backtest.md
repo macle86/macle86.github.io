@@ -2,7 +2,7 @@
 title: 자동매매 ETF 백테스팅 (레버리지, 인버스)
 author: macle
 date: 2021-01-15 21:30:00 +0800
-categories: [자동매매]
+categories: [RUNON]
 tags: [주식,ETF]
 ---
 

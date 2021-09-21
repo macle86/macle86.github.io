@@ -2,7 +2,7 @@ c---
 title: 자동 매매 연구
 author: macle
 date: 2021-01-15 20:30:00 +0800
-categories: [자동매매]
+categories: [RUNON]
 tags: [주식,ETF,비트코인,선물]
 ---
 
