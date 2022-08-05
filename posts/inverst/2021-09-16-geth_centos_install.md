@@ -2,7 +2,7 @@
 title: geth centos 에 설치
 author: macle
 date: 2021-09-16 01:10:00 +0800
-categories: [RUNON]
+categories: [투자]
 tags: [ethereum,geth]
 ---
 

@@ -2,7 +2,7 @@
 title: 자동매매 ETF 백테스팅 (레버리지, 인버스)
 author: macle
 date: 2021-01-15 21:30:00 +0800
-categories: [RUNON]
+categories: [투자]
 tags: [주식,ETF]
 ---
 
@@ -11,7 +11,9 @@ tags: [주식,ETF]
 - 연구는 섬세한 사람들의 오픈소스 프로젝트를 응용하여 사용하였습니다.
    - https://github.com/seomse/seomse-stock
    - https://github.com/seomse/seomse-trading
-
+   - https://github.com/runonio/trading 
+     - 지금은 runon 프로젝트에서 관리 
+  
 - 매매 전략 상세 알고리즘 및 소스는 공개할 수 없음을 이해 부탁드립니다. 전략 관련 부분은 비공개 저장소에서 작업중입니다.
 
 - 추세 추종 방식의 기술적 분석을 응용한 방법을 활용 했습니다
