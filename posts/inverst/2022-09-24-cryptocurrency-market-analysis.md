@@ -12,7 +12,7 @@ tags: [트레이딩]
 아래에서 사용하는 데이터는 바이낸스에서 내려받은 캔들데이터를 활용하였다.
 
 # 시장거래량 지표
-![시장거래량](https://raw.githubusercontent.com/macle86/macle86.github.io/master/assets/img/data/2022-09-24market_volume.png)
+![시장거래량](https://github.com/macle86/macle86.github.io/blob/master/img/data/2022-09-24market_volume.png?raw=true)
 
 위 그림은 시장 거래량과 비트코인 캔들 차트이다. 시장거래량은 암호화폐 시장의 전체 코인항목들을 말하고 데이터로는 바이낸스 현물시장 상장코인들을 사용하였다.
 
@@ -28,14 +28,14 @@ tags: [트레이딩]
 
 
 # 시장 거래대금 지표
-![시장거래대금](https://raw.githubusercontent.com/macle86/macle86.github.io/master/assets/img/data/2022-09-24market_price.png)
+![시장거래대금](https://github.com/macle86/macle86.github.io/blob/master/img/data/2022-09-24market_price.png?raw=true)
 
 위와 같은 방식의 이격도 평균으로 시장거래대금을 지수화 하였다. 비트코인 거래량은은 늘어나고 있지만 시장 거래대금으로보면 아직 낮은 수준이다
 
 저점 부근에서 비트코인만 먼저 오르는 현상이 있는지는 분석하지 못하였다.
 
 # 생존비율
-![시장생존비율](https://raw.githubusercontent.com/macle86/macle86.github.io/master/assets/img/data/2022-09-24market_Survival_rate.png)
+![시장생존비율](https://github.com/macle86/macle86.github.io/blob/master/img/data/2022-09-24market_Survival_rate.png?raw=true)
 
 시장 생존비율이다. 유명 유투버의 영상을 보고 만든 지표인데. 주식 시장에서 vix 40이상 생존비율 10%미만 거래량 급증의 현상이 발생하면 바닥일 확률이 높다고 하였다.
 
@@ -43,7 +43,7 @@ tags: [트레이딩]
 
 
 # 피보나치 저항선
-![피보나치저항선](https://raw.githubusercontent.com/macle86/macle86.github.io/master/assets/img/data/2022-09-24btc_fibonacci.png)
+![피보나치저항선](https://github.com/macle86/macle86.github.io/blob/master/img/data/2022-09-24btc_fibonacci.png?raw=true)
 
 피보나치 저항선에 큰의미를 두지는 않는다. 
 
