@@ -1,12 +1,12 @@
 ---
-title: 리얼타임 인메모리 검색, 분석, 통계 
+title: 리얼타임 인메모리 검색, 분석, 통계
 author: macle
 date: 2021-04-03 21:30:00 +0800
 categories: [개발]
 tags: [java,인메모리,data,빅데이터,병렬처리]
 ---
 
-- 아직 작성중인 글로 완성 된 내용이 아닙니다. 내용이 많아서 시간의 여유가 되는 대로 추가로 작성될 예정 입니다. 
+- 아직 작성중인 글로 완성 된 내용이 아닙니다. 내용이 많아서 시간의 여유가 되는 대로 추가로 작성될 예정 입니다.
 
 # 개요
 테그클라우드, 의미네트워크, 로지트리, 트랜드분석 등의 분류, 통계등에 활용되는 기능은 (5,10,30)분 (1,6,12,24)시간 (1,7,30)일 (1,3,6,12)달 1년 단위의 마트데이터를 만들어서 활용할때가 많습니다.
@@ -25,16 +25,16 @@ tags: [java,인메모리,data,빅데이터,병렬처리]
 
 단 하루에 조건을 걸어서 서비스를 호출하는 회수가 10회 이하인 회사가 많을때 비효율적인 서비스 모델이 됩니다.
 
-이러한경우에 마트를 활용하지 않고 실시간 분석결과를 생성하게 하면 관리비용이 크게 줄기 때문에 서비스 비용도 저렴해질 수 있습니다. 
+이러한경우에 마트를 활용하지 않고 실시간 분석결과를 생성하게 하면 관리비용이 크게 줄기 때문에 서비스 비용도 저렴해질 수 있습니다.
 
 이상황을 해결한 방법에 대한 내용입니다. 관련부분은 기술 특허도 진행중이 내용입니다.
 
 아래 서비스들이 활용되는 서비스 입니다. 검색조건별, 분류별, 체녈별로 단어통게 분류통계 연관분석 혹은 다른형태의 데이터 분석에 활용되는 시각화 형태입니다.
 
-![통계](https://github.com/macle86/macle86.github.io/blob/master/img/realtime/stat.JPG?raw=true)
-![테그 클라우드](https://github.com/macle86/macle86.github.io/blob/master/img/realtime/tagcloud.png?raw=true)
-![의미 네트워크](https://github.com/macle86/macle86.github.io/blob/master/img/realtime/sna.png?raw=true)
-![기타차트](https://github.com/macle86/macle86.github.io/blob/master/img/realtime/etc.jpg?raw=true)
+![통계](https://raw.githubusercontent.com/macle86/macle86.github.io/master/img/realtime/stat.JPG)
+![테그 클라우드](https://raw.githubusercontent.com/macle86/macle86.github.io/master/img/realtime/tagcloud.png)
+![의미 네트워크](https://raw.githubusercontent.com/macle86/macle86.github.io/master/img/realtime/sna.png)
+![기타차트](https://raw.githubusercontent.com/macle86/macle86.github.io/master/img/realtime/etc.jpg)
 
 # 어떠한 상황 이었는지
 - 한달에 약 1억건이상의 텍스트 데이터
