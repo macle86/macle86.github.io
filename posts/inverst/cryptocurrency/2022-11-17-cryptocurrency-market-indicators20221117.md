@@ -38,7 +38,7 @@ tags: [트레이딩,비트코인,암호화폐,투자]
 단 최대값은 200으로 고정하였다.
 
 # ADMR( ADR 변형)
-![ADMR](https://raw.githubusercontent.com/macle86/macle86.github.io/master/img/data/20221117/2022-11-17market-adr.png)
+![ADMR](https://raw.githubusercontent.com/macle86/macle86.github.io/master/img/data/20221117/2022-11-17market-admr.png)
 
 이부분은 봇을 개발하다보니까 숫자의 절대치를 두고자 만든값으로 (상승종목수-하락종목수)/마켓종목수 로 -100~100 까지 움직이는 값을 추가하였다 모양은 ADR값과 비슷하다.
 14일 지수이동평균 값이다.
